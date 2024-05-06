@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="review.html">Review</a>
+    </nav>
+</header>
+
+<body>
+    <header>
+        <h1>
+            <center>Savings Calculator</center>
+        </h1>
+    </header>
+
+    <div class="container">
+        <h1>Income and Expense Entry</h1>
+        <form id="financeForm" onsubmit="handleSubmit(event)">
+            <div>
+                <label for="monthlyIncome">Monthly Income:</label>
+                <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Input monthly income">
+            </div>
+            <div id="expenseEntries">
+                <div class="expenseEntry">
+                    <label for="expenses">Expenses:</label>
+                </div>
+                <button type="button" onclick="addExpenseEntry()">Add More</button>
+
+                <button id="questionBtn">?</button>
+                <div id="noteContainer" class="hidden">
+                    Here are some notes on how to use this page: <br>
+                    - Enter your monthly income and expenses.<br>
+                    - Use the "Add More" button to add new expense fields.<br>
+                    - Click 'Save' to keep your entries without submitting.<br>
+                    - Use 'Edit' to modify existing entries.
+                </div>
+        </form>
+    </div>
+    <div class="form-controls">
+        <button type="submit" id="submitBtn">Submit</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
